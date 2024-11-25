@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/deathengine/static/css/main.c8be4148.css",
-    "main.js": "/deathengine/static/js/main.04251cad.js",
+    "main.css": "/deathengine/static/css/main.beb944e1.css",
+    "main.js": "/deathengine/static/js/main.d54f7576.js",
     "index.html": "/deathengine/index.html",
-    "main.c8be4148.css.map": "/deathengine/static/css/main.c8be4148.css.map",
-    "main.04251cad.js.map": "/deathengine/static/js/main.04251cad.js.map"
+    "main.beb944e1.css.map": "/deathengine/static/css/main.beb944e1.css.map",
+    "main.d54f7576.js.map": "/deathengine/static/js/main.d54f7576.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8be4148.css",
-    "static/js/main.04251cad.js"
+    "static/css/main.beb944e1.css",
+    "static/js/main.d54f7576.js"
   ]
 }
