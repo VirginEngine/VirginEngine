@@ -1,13 +1,27 @@
 {
   "files": {
-    "main.css": "/deathengine/static/css/main.494221fc.css",
-    "main.js": "/deathengine/static/js/main.4bf18305.js",
+    "main.css": "/deathengine/static/css/main.1523a3b3.css",
+    "main.js": "/deathengine/static/js/main.55b709f6.js",
+    "static/js/418.bb146d39.chunk.js": "/deathengine/static/js/418.bb146d39.chunk.js",
+    "static/js/937.40321a24.chunk.js": "/deathengine/static/js/937.40321a24.chunk.js",
+    "static/js/732.ee979365.chunk.js": "/deathengine/static/js/732.ee979365.chunk.js",
+    "static/js/251.485c9a0f.chunk.js": "/deathengine/static/js/251.485c9a0f.chunk.js",
+    "static/js/470.701f6894.chunk.js": "/deathengine/static/js/470.701f6894.chunk.js",
+    "static/js/526.a8e97ad6.chunk.js": "/deathengine/static/js/526.a8e97ad6.chunk.js",
+    "static/js/602.0f1c09b6.chunk.js": "/deathengine/static/js/602.0f1c09b6.chunk.js",
+    "static/media/run.j": "/deathengine/static/media/run.8d7c300da965590033cb.j",
     "index.html": "/deathengine/index.html",
-    "main.494221fc.css.map": "/deathengine/static/css/main.494221fc.css.map",
-    "main.4bf18305.js.map": "/deathengine/static/js/main.4bf18305.js.map"
+    "static/media/canvas.j": "/deathengine/static/media/canvas.75dd89bbfbfb3da8b883.j",
+    "static/media/basicFunctions.j": "/deathengine/static/media/basicFunctions.81ca44a6679e1ccd2f1b.j",
+    "static/media/start.j": "/deathengine/static/media/start.5b87d2a7bd64a6eeb8a1.j",
+    "static/media/render.j": "/deathengine/static/media/render.c1ed8791386d1ce58ac2.j",
+    "static/media/update.j": "/deathengine/static/media/update.6bcddef60465b681d569.j",
+    "static/media/callFunctions.j": "/deathengine/static/media/callFunctions.717ead267a1f883aa11a.j",
+    "main.1523a3b3.css.map": "/deathengine/static/css/main.1523a3b3.css.map",
+    "main.55b709f6.js.map": "/deathengine/static/js/main.55b709f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.494221fc.css",
-    "static/js/main.4bf18305.js"
+    "static/css/main.1523a3b3.css",
+    "static/js/main.55b709f6.js"
   ]
 }
