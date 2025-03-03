@@ -1,39 +1,41 @@
 let gameTime = 1
 
-let ms = 1000 / 60 / gameTime
+let ms = 100
 let updatesLegit = 0
 let framesLegit = 0
 
+let lastTime = now()
+
 const setGameTime = (newTime) => {
   gameTime = newTime
-  ms = 1000 / 60 / gameTime
+  ms = 1000 / (60 * gameTime)
   lastTime = now()
 }
 
-let lastTime = now()
+setGameTime(1)
+
+let frames = 0
 const run = async () => {
   start()
+  requestAnimationFrame(render)
 
   let timer = now()
-  let frames = 0
   let updates = 0
   let delta = 0
-  while(true) {
+  while (true) {
     const nowTime = now()
     delta += (nowTime - lastTime) / ms
-    if(delta > 60) {
+    if (delta > 60) {
       delta = 60
     }
     lastTime = nowTime
-    while(delta >= 1) {
+    while (delta >= 1) {
       update()
       updates++
       delta--
     }
-    render()
-    frames++
 
-    if(now() - timer > 1000) {
+    if (now() - timer > 1000) {
       timer += 1000
       updatesLegit = updates
       framesLegit = frames
