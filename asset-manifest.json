@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/deathengine/static/css/main.1523a3b3.css",
-    "main.js": "/deathengine/static/js/main.0228551c.js",
+    "main.js": "/deathengine/static/js/main.19189dc9.js",
     "static/js/602.ac964b4a.chunk.js": "/deathengine/static/js/602.ac964b4a.chunk.js",
     "static/js/881.bbc108de.chunk.js": "/deathengine/static/js/881.bbc108de.chunk.js",
     "static/js/671.cb9d6a96.chunk.js": "/deathengine/static/js/671.cb9d6a96.chunk.js",
@@ -30,10 +30,10 @@
     "static/media/Physics.j": "/deathengine/static/media/Physics.45cdfba5ab32538aa56b.j",
     "static/media/Sprite.j": "/deathengine/static/media/Sprite.58a1d0e87eba28a27e40.j",
     "main.1523a3b3.css.map": "/deathengine/static/css/main.1523a3b3.css.map",
-    "main.0228551c.js.map": "/deathengine/static/js/main.0228551c.js.map"
+    "main.19189dc9.js.map": "/deathengine/static/js/main.19189dc9.js.map"
   },
   "entrypoints": [
     "static/css/main.1523a3b3.css",
-    "static/js/main.0228551c.js"
+    "static/js/main.19189dc9.js"
   ]
 }
