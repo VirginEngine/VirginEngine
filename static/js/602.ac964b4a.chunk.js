@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdeathengine=self.webpackChunkdeathengine||[]).push([[602],{9602:(e,a,s)=>{e.exports=s.p+"static/media/canvas.5de6ff81957dfd164d12.j"}}]);

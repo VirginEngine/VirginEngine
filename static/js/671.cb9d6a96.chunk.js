@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdeathengine=self.webpackChunkdeathengine||[]).push([[671],{8671:(e,c,a)=>{e.exports=a.p+"static/media/GameObject.140ccf343159c87aecb0.j"}}]);
