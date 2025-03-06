@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdeathengine=self.webpackChunkdeathengine||[]).push([[589],{589:(e,t,a)=>{e.exports=a.p+"static/media/start.4c784031acd341509f2f.j"}}]);
