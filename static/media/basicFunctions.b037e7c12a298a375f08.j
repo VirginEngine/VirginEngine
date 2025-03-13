@@ -1,18 +1,20 @@
+// Time
 const wait = async (time) => await new Promise((r) => setTimeout(r, time))
 const wait0 = async () => new Promise((r) => setTimeout(r))
 
 const now = () => window.performance.now()
 
-const isFirstUpperCase = ([letter]) =>
-  `ABCDEFGHIJKLMNOPRQSTUWXYZ`.includes(letter)
+// Is child
+const isChildKey = (text) => `ABCDEFGHIJKLMNOPRQSTUWXYZ`.includes(text[0])
 
+// Deep copy
 const deepCopy = (data) => {
   if (typeof data === `function`) {
     return data
   }
 
   if (Array.isArray(data)) {
-    return data.reduce((old, val) => [...old, val], [])
+    return data.reduce((old, val) => [...old, deepCopy(val)], [])
   }
 
   if (typeof data === `object`) {
@@ -28,6 +30,8 @@ const deepCopy = (data) => {
   return data
 }
 
-const loadScene = (scene) => {
-  currentScene = new GameObject(deepCopy(scene))
+// Load scene
+const loadScene = (newScene) => {
+  scene = new GameObject(deepCopy(newScene))
+  start()
 }
