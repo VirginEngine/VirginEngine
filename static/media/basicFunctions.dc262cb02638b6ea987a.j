@@ -9,9 +9,7 @@ const isChildKey = (text) => `ABCDEFGHIJKLMNOPRQSTUWXYZ`.includes(text[0])
 
 // Deep copy
 const deepCopy = (data) => {
-  if (typeof data === `function`) {
-    return data
-  }
+  if (typeof data === `function`) return data
 
   if (Array.isArray(data)) {
     return data.reduce((old, val) => [...old, deepCopy(val)], [])
@@ -34,4 +32,15 @@ const deepCopy = (data) => {
 const loadScene = (newScene) => {
   scene = new GameObject(deepCopy(newScene))
   start()
+}
+
+// Set and draw on ctx (canvas)
+const draw = ({ text, x, y, ...props }) => {
+  ctx.save()
+  for (const key in props) {
+    ctx[key] = props[key]
+  }
+
+  if (text) ctx.fillText(text, x, y)
+  ctx.restore()
 }

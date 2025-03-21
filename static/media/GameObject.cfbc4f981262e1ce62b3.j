@@ -2,15 +2,24 @@ class GameObject {
   toUpdate = []
   toRender = []
 
-  constructor({ parent, transform, sprite, start, update, render, ...rest }) {
+  constructor({
+    parent,
+    transform,
+    rect,
+    sprite,
+    text,
+    start,
+    update,
+    render,
+    ...rest
+  }) {
+    gameObjects.push(this)
+
     if (parent) this.parent = parent
 
     this.transform = new Transform(transform, this)
+    if (text) this.text = new Text(text, this, rect)
     //if (sprite) this.sprite = new Sprite(sprite)
-
-    if (start) toStart.push(start.bind(this))
-    if (update) this.toUpdate.push(update.bind(this))
-    if (render) this.toRender.push(render.bind(this))
 
     for (const key in rest) {
       if (isChildKey(key)) {
@@ -20,14 +29,17 @@ class GameObject {
           typeof rest[key] === `function` ? rest[key].bind(this) : rest[key]
       }
     }
+
+    if (update) this.toUpdate.push(update.bind(this))
+    if (render) this.toRender.push(render.bind(this))
+
+    start?.bind(this)()
   }
 
   get childs() {
     const childs = []
     for (const key in this) {
-      if (isChildKey(key)) {
-        childs.push(this[key])
-      }
+      if (isChildKey(key)) childs.push(this[key])
     }
     return childs
   }
@@ -38,9 +50,7 @@ class GameObject {
 
   static destroy(obj) {
     // TO DO complite delete, do not delete objects and arrays, !!! DO NOT DELETE functions !!!
-    for (const child of obj.childs) {
-      GameObject.destroy(child)
-    }
+    for (const child of obj.childs) GameObject.destroy(child)
 
     const { parent } = obj
     let parentKey = ``
@@ -51,10 +61,8 @@ class GameObject {
       }
     }
 
-    for (const key in obj) {
-      delete obj[key]
-    }
-
+    for (const key in obj) delete obj[key]
+    gameObjects.splice(gameObjects.indexOf(obj))
     delete parent[parentKey]
   }
 }
