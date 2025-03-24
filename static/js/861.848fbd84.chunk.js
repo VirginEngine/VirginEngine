@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdeathengine=self.webpackChunkdeathengine||[]).push([[861],{861:(e,a,s)=>{e.exports=s.p+"static/media/Physics.241aa7badaecee81c8a7.j"}}]);
