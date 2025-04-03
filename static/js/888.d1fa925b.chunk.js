@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvirginengine=self.webpackChunkvirginengine||[]).push([[888],{888:(e,i,n)=>{e.exports=n.p+"static/media/basicFunctions.1af629e67ab8cc8af5a2.j"}}]);

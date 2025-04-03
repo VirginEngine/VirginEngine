@@ -6,20 +6,18 @@ class GameObject {
     parent,
     transform,
     rect,
-    sprite,
     text,
+    sprite,
     start,
     update,
     render,
     ...rest
   }) {
-    gameObjects.push(this)
-
     if (parent) this.parent = parent
 
     this.transform = new Transform(transform, this)
     if (text) this.text = new Text(text, this, rect)
-    //if (sprite) this.sprite = new Sprite(sprite)
+    if (sprite) this.sprite = new Sprite(sprite, this)
 
     for (const key in rest) {
       if (isChildKey(key)) {
@@ -33,7 +31,12 @@ class GameObject {
     if (update) this.toUpdate.push(update.bind(this))
     if (render) this.toRender.push(render.bind(this))
 
-    start?.bind(this)()
+    if (start) {
+      this.start = start.bind(this)
+      this.start()
+    }
+
+    gameObjects.push(this)
   }
 
   get childs() {
@@ -44,8 +47,29 @@ class GameObject {
     return childs
   }
 
-  destroy() {
-    GameObject.destroy(this)
+  get name() {
+    for (const key in this.parent) {
+      if (this === this.parent[key]) return key
+    }
+  }
+
+  get props() {
+    const newObj = {
+      start: this?.start,
+      update: this?.update,
+      transform: {
+        position: this.position,
+        rotation: this.rotation,
+        scale: this.scale
+      }
+    }
+
+    // for (const key in this) {
+    //   if (![`toUpdate`, `toRender`, `parent`].includes(key))
+    //     newObj[key] = this[key]
+    // }
+
+    return deepCopy(newObj)
   }
 
   static destroy(obj) {
